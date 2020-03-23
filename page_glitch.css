@@ -5,25 +5,34 @@
     margin: 0;
     padding: 0
 }
-
 /*Font: MR.ROBOT*/
 @font-face {
   font-family: 'mrrobotregular';
-  src: url('fonts/mr_robot-webfont.woff2') format('woff2'),
-       url('fonts/mr_robot-webfont.woff') format('woff');
+  src: url('./fonts/mr_robot-webfont.woff2') format('woff2'),
+       url('./fonts/mr_robot-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
 /*Font: WATCHDOGS*/
 @font-face {
   font-family: 'hackedregular';
-  src: url('fonts/hacked-webfont.woff2') format('woff2'),
-       url('fonts/hacked-webfont.woff') format('woff');
+  src: url('./fonts/hacked-webfont.woff2') format('woff2'),
+       url('./fonts/hacked-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
+.blog_intro{
+  position: absolute;
+  bottom: 20%;
+  left: 35px;
+  font-size: 20px;
+}
+#about{
+  font-family: monospace;
+  color: snow;
+  background-color: none;
+}
+/*Walkthroughs div*/
 .walkthrough{
   background-color: none;
   position:absolute;
@@ -31,16 +40,18 @@
   right: 192px;
   font-size:20px;
 }
-
-#Walkthroughs{
+/*CSS for all h1 Heading*/
+h1{
   position: relative;
   font-family: 'hackedregular';
   color: white;
+}
+#Walkthroughs{
   padding-top: 100px;
   padding-right: 30px;
 }
-/*Hack the box button*/
-#HTB{
+/*button*/
+button{
   font-family: sans-serif;
   display: inline-block;
   border-radius: 4px;
@@ -55,18 +66,18 @@
   cursor: pointer;
   margin: 5px;
 }
-#HTB{
+button{
   background-color: black;
   color: white;
   border: 4px solid red;
 }
-#HTB span{
+button span{
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-#HTB span:after {
+button span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -74,70 +85,24 @@
   right: -20px;
   transition: 0.5s;
 }
-#HTB:hover span {
+button:hover span {
   padding-right: 25px;
 }
 
-#HTB:hover span:after {
+button:hover span:after {
   opacity: 1;
   right: 0;
 }
-#HTB:hover{
+button:hover{
   background-color: red;
   color: black;
 }
-/*Try hack me button*/
 
-#THM{
-  font-family: sans-serif;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: red;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 21px;
-  padding: 20px;
-  width: 250px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-#THM{
-  background-color: black;
-  color: white;
-  border: 4px solid red;
-}
-#THM span{
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-#THM span:after {
-  content: '\00bb';
+/*Page Title*/
+.typewrite {
   position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-#THM:hover span {
-  padding-right: 25px;
-}
-
-#THM:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-#THM:hover{
-  background-color: red;
-  color: black;
-}
-
-.title {
-  position: relative;
   font-family: 'mrrobotregular';
+  text-decoration: none;
   color: red;
   padding-top: 35px;
   padding-left: 35px;
@@ -146,17 +111,16 @@
   font-size: 90px;
   animation: glitch 2s steps(100) infinite;
 }
-
+/*MR.ROBOT Quote*/
 .intro {
   font-family: monospace;
   color: snow;
   background-color: none;
-  position:relative;
-  padding-top: 140px;
+  position:absolute;
+  padding-top: 160px;
   padding-left: 35px;
   font-size:20px;
   width:35%;
-  background-color: none;
 }
 
 #headline{
@@ -181,7 +145,7 @@
     left: calc(-1 * 10px);
     width: calc(100% + 10px * 2);
     height: calc(100% + 5px * 2);
-    background: url("images/background.jpg") no-repeat 50% 0;
+    background: url("./images/background.jpg") no-repeat 50% 0;
     background-color: transparent;
     background-size: cover;
     transform: translate3d(0, 0, 0);
