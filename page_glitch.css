@@ -44,19 +44,20 @@
 .walkthrough{
   background-color: none;
   position:absolute;
-  top: 8px;
-  right: 192px;
+  top: 150px;
+  right: 150px;
   font-size:20px;
+}
+#Walkthroughs{
+  padding-left: 20px;
+  text-shadow: 2px 2px 3px #000000;
 }
 /*CSS for all h1 Heading*/
 h1{
   position: relative;
   font-family: 'hackedregular';
+  text-shadow: 2px 2px 3px #000000;
   color: white;
-}
-#Walkthroughs{
-  padding-top: 100px;
-  padding-right: 30px;
 }
 /*button*/
 button{
@@ -69,10 +70,9 @@ button{
   text-align: center;
   font-size: 20px;
   padding: 20px;
-  width: 250px;
+  width: 300px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
 }
 button{
   background-color: black;
@@ -174,19 +174,19 @@ button:hover{
 .glitch .glitch-img:nth-child(2) {
     background-color: transparent;
     background-blend-mode: none;
-    /*animation-name: glitch-anim-1*/
+    animation-name: glitch-anim-1
 }
 
 .glitch .glitch-img:nth-child(3) {
     background-color: transparent;
     background-blend-mode: none;
-    /*animation-name: glitch-anim-2*/
+    animation-name: glitch-anim-2
 }
 
 .glitch .glitch-img:nth-child(4) {
     background-color: transparent;
     background-blend-mode: none;
-    /*animation-name: glitch-anim-3*/
+    animation-name: glitch-anim-3
 }
 
 /* GLITCH EFFECT */
