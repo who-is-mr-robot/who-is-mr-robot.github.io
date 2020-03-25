@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Information Gathering</title>
+    <link rel = "stylesheet"
+          type = "text/css"
+          href = "particle.css" />
+  </head>
+  <body>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+    <!-- Heading: Information Gathering -->
+    <div class="heading">
+      <h1 id='head'>INFORMATION GATHERING</h1>
+    </div>
+    <div class="content">
+      <h3 id='sub-heading'>PASSIVE INFORMATION GATHERING</h3>
+      <h5 id='techniques'>1. WEBSITE RECON</h5>
+      <p> Doing recon on the target website without actually interacting with it. Look out for the contacts section or the about page for the email addresses and the patterns in them.</p>
+      <p>[Eg:] Consider the following website: <a href="http://www.megacorpone.com">www.megacorpone.com</a></p>
+      <p><img src="images/1-1.png" alt="website: megacorpone.com" /></p>
+      <p>[+] The pattern here is that the old employees found to have only the first name in their email addresses. Whereas, the newly hired employees tend to have lastname and their first name in them.</p>
+      <h5 id='techniques'>2. WHOIS ENUMERATION</h5>
+      <p>The ‘whois’ is a tcp-based tool and a database that contains information about the website and the registrar. Now, issue the whois client, the name of the domain to recon.</p>
+      <div class="codebox">$: whois&nbsp;megacorpone&nbsp;<span style="font-weight:700">|</span>&nbsp;<span style="font-weight:700">less</span></div>
+      <br><img src="images/1-2.png" alt="images/1-2.png" />
+      <br><p>[+] We got the name of the registrar and also his contacts.<br /> [+] We also got the name of the nameserver.</p>
+      <p><strong style ="color:#c81912">REVERSE WHOIS LOOKUP:</strong> In addition, the whois client can also perform the lookup on a given IP address. On performing a reverse lookup scan for the below specified IP, we get to know who is hosting the IP address.
+      </p>
+      <div class="codebox">$: whois&nbsp;38.100.193.76&nbsp;<span style="font-weight:700">|</span>&nbsp;<span style="font-weight:700">less</span>
+      </div>
+      <br>
+      <img src="images/1-3.png" alt="images/1-3.png" />
+      <br>
+      <h5 id='techniques'>3. GOOGLE HACKING</h5>
+      <p>Google Hacking is the term refers to the process of finding or uncovering critical information, vulnerabilities and misconfigured servers using google search operators. In this technique, we use clever strings and operators to refine the search results based on our search queries.</p>
+      <p>[+] Some of the common operators:</p>
+      <br><img src="images/1-4.png" alt="images/1-4.png" />
+      <br>
+      <p> Most of the time, searching for a filetype, using ‘filetype’ operator combined with the ‘site’ operator, gives the unintended or exposed filetypes such as '.pl', ‘.jsp’, ‘.cfm’ could expose the perl, java server pages and adobe cold-fusion  which should only be available to the internal networks.</p>
+      <br><img src="images/1-5.png" alt="images/1-5.png" /><br>
+      <p>This operator will fetch all the php filetypes from the site ‘megacorpone.com’.</p>
+      <img src="images/1-6.png" alt="images/1-6.png" /><br>
+      <p>Using ‘-’ sign will exclude the filetype from the query results.</p>
+      <img src="images/1-7.png" alt="images/1-7.png" />
+      <p>The ‘intitle’ operator combined with ‘index of /’ will fetch results with ‘index of’ in the title and the parent directory ‘/’ in the contents.</p>
+       <img src="images/1-8.png" alt="images/1-8.png" />
+       <p> Wrapping up the Google hacking with this Exploit database for Google Hacking. It has some more advanced google hacking queries that can sometimes reveal major misconfigurations and vulnerabilities.</p>
+       <h5 id='techniques'>4. NETCRAFT</h5>
+       <p>Netcraft is an internet services company that provides web portal for various information gathering techniques.<br>[Note:] However, this technique of information gathering is still considered as passive, as we're not directly interacting with the target.</p>
+       <p>[site:] <a href="http://www.netcraft.com">www.netcraft.com</a><br>Search by DNS: <a href="http://www.searchdns.netcraft.com">www.searchdns.netcraft.com</a></p>
+      <img src="images/1-9.png" alt="images/1-9.png" />
+      <p>Each search will provide us the site report which initially contains the registrar informations, followed by the technologies used by the domain.</p>
+      <img src="images/1-10.png" alt="images/1-10.png">
+      <br>
+      <p>To be continued in Passive Information Gathering - 2!</p>
+    </div>
+    <div class="mrrobot_ask">
+      <h2 id='mr_heading'>ARE YOU A MR.ROBOT FREAK?</h2>
+    </div>
+    <div class="mrrobot_card">
+    </div>
+    <div class="checkthisout">
+      <h2 id='checkthisout'>CHECK THIS OUT!</h2>
+    </div>
+  <script src="particles.js">
+  </script>
+  <script src="app.js">
+  </script>
+  </body>
+</html>
