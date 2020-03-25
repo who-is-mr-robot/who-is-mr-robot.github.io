@@ -8,24 +8,24 @@
 /*Font: MR.ROBOT*/
 @font-face {
   font-family: 'mrrobotregular';
-  src: url('fonts/mr_robot-webfont.woff2') format('woff2'),
-       url('fonts/mr_robot-webfont.woff') format('woff');
+  src: url('./fonts/mr_robot-webfont.woff2') format('woff2'),
+       url('./fonts/mr_robot-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 /*Font: WATCHDOGS*/
 @font-face {
   font-family: 'hackedregular';
-  src: url('fonts/hacked-webfont.woff2') format('woff2'),
-       url('fonts/hacked-webfont.woff') format('woff');
+  src: url('./fonts/hacked-webfont.woff2') format('woff2'),
+       url('./fonts/hacked-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 /*Font: ESCAPEARTIST*/
 @font-face {
   font-family: 'glyphs';
-  src: url('fonts/glyphs-webfont.woff2') format('woff2'),
-       url('fonts/glyphs-webfont.woff') format('woff');
+  src: url('./fonts/glyphs-webfont.woff2') format('woff2'),
+       url('./fonts/glyphs-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -153,7 +153,7 @@ button:hover{
     left: calc(-1 * 10px);
     width: calc(100% + 10px * 2);
     height: calc(100% + 5px * 2);
-    background: url("images/background.jpg") no-repeat 50% 0;
+    background: url("./images/background.jpg") no-repeat 50% 0;
     background-color: transparent;
     background-size: cover;
     transform: translate3d(0, 0, 0);
